@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        @font-face {
+            font-family: 'twayair';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .div{
+            
+        }
+
+        .body{
+            width:800px;
+            height:1000px;
+            
+            
+        }
+        .auto-style1 {
+            width: 800px;
+            height:50px;
+            
+        }
+        .auto-style6 {
+            height: 630px;
+            width: 800px;
+            background-color:white;
+        }
+        .font {
+             font-family: 'twayair';
+            font-size:80px;
+        }.font1 {
+             font-size:10px;
+         }
+
+        .auto-style21 {
+            width: 800px;
+            height: 35px;
+            margin-right: 0px;
+        }
+        .auto-style99{
+            height:200px;
+            width: 800px;
+        }
+          #ContentPlaceHolder1{
+              height:730px;
+              width:800px;
+          }
+         
+        .auto-style100 {
+            width: 800px;
+            height:50px;
+        }
+         
+         
+         
+        </style>
+</head>
+<body style="text-align: center">
+    <form id="form1" runat="server">
+    <div style="border-right-style: solid; border-width: 2px; border-color: #c0c0c0">        
+        <table class="auto-style21" style="padding: 0px; margin: 0px; border: 2.5px solid #DFFFFF; background-color: #DFFFFF">
+            <tr>
+                <td class="auto-style99"  style="padding: 0px; margin: 0px; border: 2.5px solid #DEECFF; background-color: #F3F8FF;" ;>
+        
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="200px" ImageAlign="Bottom" ImageUrl="~/Image/new_header.jpg" Width="801px" OnClick="ImageButton1_Click" />
+        
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1"  style="padding: 0px; margin: 0px; border: 2.5px solid #BFD5FF; background-color: #DDECFF;" ;>
+                    <asp:ImageMap ID="ImageMap2" Width="800px" runat="server" ImageUrl="~/Image/new_menu.jpg" Height="50px" ImageAlign="Middle" OnClick="ImageMap2_Click">
+                        <asp:CircleHotSpot Radius="30" X="128" Y="25" NavigateUrl="~/Introd.aspx" AlternateText="소개" />
+                        <asp:CircleHotSpot Radius="30" X="210" Y="25" NavigateUrl="~/Map.aspx" AlternateText="여행정보" />
+                        <asp:CircleHotSpot Radius="40" X="308" Y="25" NavigateUrl="~/CIty.aspx" AlternateText="추천 여행지" />
+                        <asp:CircleHotSpot Radius="45" X="415" Y="25" NavigateUrl="~/exchanged.aspx" AlternateText="환율정보" />
+                        <asp:CircleHotSpot Radius="45" X="500" Y="25" NavigateUrl="~/여행후기.aspx" AlternateText="여행후기" />
+                        <asp:CircleHotSpot Radius="30" X="600" NavigateUrl="~/Mileage.aspx" AlternateText="상점" Y="25" />
+                        <asp:CircleHotSpot Radius="30" X="620" />
+                        <asp:CircleHotSpot AlternateText="로그인" NavigateUrl="~/login2.aspx" Radius="15" X="680" Y="25" />
+                        <asp:CircleHotSpot AlternateText="로그아웃" Radius="15" X="711" Y="25" NavigateUrl="~/Outaspx.aspx" />
+                        <asp:CircleHotSpot AlternateText="회원가입" NavigateUrl="~/Join.aspx" Radius="15" X="770" Y="25" />
+                    </asp:ImageMap>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6" style="padding: 0px; margin: 0px; border: 2.5px solid #C1C1FF; background-color: #C6CFFF;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style100" style="padding: 0px; margin: 0px; border: 2.5px solid #DEECFF; font-family: twayair; background-color: #F3F8FF; font-size: 16px; color: #3679B6;"  > Copyright ⓒ 2022. 세계일주가시조 All rights Reserved. </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
